@@ -28,11 +28,11 @@ const user = getUser();
 //const country = user.address.country;
 const doorNumber = user.address.fullAddress.doorNumber;
 
-const {name, age, address: { country : theCountry }} = user;
+const {name: theName, age: theAge, address: { country : theCountry }} = user;
 const { address : { fullAddress : { doorNumber : number }}} = user;
 
-console.log(name)
-console.log(age)
+console.log(theName)
+console.log(theAge)
 console.log(theCountry)
 console.log(number)
 
