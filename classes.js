@@ -17,6 +17,10 @@ class Animal {
     this.age = age;
   }
 
+  static iAmAstaticMethod(){
+    console.log('I am a static method inside of an Animal class')
+  }
+
   eat() {
     console.log(`${this.name} is eating`);
   }
@@ -34,10 +38,23 @@ class Animal {
   }
 }
 
-const bobby = new Animal("bobby", 2)
-bobby.eat();
-bobby.wakeUp();
-bobby.logAge();
+class Dog extends Animal {
+  constructor(name, age,  breed) {
+    super(name, age);
+    this.breed = breed;
+  }
+
+  logBread(){
+    console.log(`${this.name} is a ${this.breed}`);
+  }
+
+  logAgeFromDog(){
+    super.logAge()
+  }
+}
+
+const mike = new Dog("bobby", 2, 'Bolldog')
+mike.logAgeFromDog()
 
 console.log('---------------------')
 
