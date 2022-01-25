@@ -62,3 +62,8 @@ const marshall = new Animal("marshall", 3)
 marshall.eat()
 marshall.wakeUp()
 marshall.logAge()
+
+
+
+// Static method in Animal
+Animal.iAmAstaticMethod();
